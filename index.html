@@ -4378,7 +4378,9 @@ function _resumeSession(){
   setTimeout(()=>DiscRules.refresh(true).catch(()=>{}), 2500);
   // PWA Service Worker - samo na GitHub Pages originu
   if('serviceWorker' in navigator && location.hostname.includes('github.io')){
-    navigator.serviceWorker.register('/Knjiga-rokova/sw.js')
+    // Dinamička putanja — radi za bilo koji repo (Aman, demo, ili budući klijent) bez izmene koda
+    const swPath=location.pathname.replace(/index\.html$/,'')+'sw.js';
+    navigator.serviceWorker.register(swPath)
       .then(reg=>console.log('[SW] Registrovan, scope:',reg.scope))
       .catch(err=>console.warn('[SW] Registracija neuspela:',err));
   }
