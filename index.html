@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Knjiga Rokova — Aman</title>
+<title>Knjiga Rokova — DEMO</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#B86A00">
 <meta name="mobile-web-app-capable" content="yes">
@@ -515,7 +515,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   <div class="login-logo">
     <div class="ico"><img src="icon-192.png" alt="Knjiga Rokova"></div>
     <h1>Knjiga Rokova</h1>
-    <p>Aman maloprodaja</p>
+    <p>Demo maloprodaja</p>
   </div>
   <div class="role-btns">
     <button class="role-btn" id="rb-super" onclick="Login.setRole('super')">
@@ -692,7 +692,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <!-- SUPER ADMIN -->
 <div id="page-super" class="page">
 <header>
-  <div class="hbrand"><div class="hico">🔐</div><div><div class="htitle">SUPER ADMIN</div><div class="hsub">Aman — Knjiga Rokova</div></div></div>
+  <div class="hbrand"><div class="hico">🔐</div><div><div class="htitle">SUPER ADMIN</div><div class="hsub">DEMO — Knjiga Rokova</div></div></div>
   <div class="hactions">
     <button class="hbtn" id="btn-demo-reset" style="display:none;background:#1A1A1A;color:#FFD700;border-color:#1A1A1A" onclick="DemoSeed.reset()">🎬 <span>Reset Demo</span></button>
     <button class="hbtn" onclick="CfgMgr.open()">⚙️ <span>Podešavanja</span></button>
@@ -2117,7 +2117,7 @@ const PDFReport={
         y+=3;
       });
       doc.setTextColor(...GRAY);doc.setFontSize(7);doc.setFont('helvetica','normal');
-      doc.text('Aman maloprodaja - Knjiga Rokova',PW/2,292,{align:'center'});
+      doc.text('Demo maloprodaja - Knjiga Rokova',PW/2,292,{align:'center'});
       const fn='knjiga_rokova_'+storeName.replace(/\s+/g,'_')+'_'+from+'_'+to+'.pdf';
       doc.save(fn);
       toast('PDF preuzet: '+fn,'ok');
@@ -3883,7 +3883,7 @@ const AdvExport={
       });
       flush();
       doc.setTextColor(...GRAY);doc.setFontSize(6.5);doc.setFont('helvetica','normal');
-      doc.text('Aman maloprodaja — Knjiga Rokova — Ukupno: '+rows.length+' stavki',PW/2,PH-3,{align:'center'});
+      doc.text('Demo maloprodaja — Knjiga Rokova — Ukupno: '+rows.length+' stavki',PW/2,PH-3,{align:'center'});
       const catSufx=catFilter!=='__all__'?'_kat'+catFilter:'';
       const sifraSufx=sifraFilter?'_sif'+sifraFilter:'';
       doc.save('izvoz_super_'+dateFrom+'_'+dateTo+catSufx+sifraSufx+'.pdf');
@@ -4287,7 +4287,7 @@ function sendEmail(store, date, exp, disc, articles, categories) {
   }
 
   body += '</div>';
-  body += '<div class="footer">Aman maloprodaja — Knjiga Rokova &nbsp;|&nbsp; '
+  body += '<div class="footer">Demo maloprodaja — Knjiga Rokova &nbsp;|&nbsp; '
         + exp.length + ' isteka, ' + disc.length + ' sniženja</div>';
 
   const html = '<!DOCTYPE html><html><head><meta charset="UTF-8">'
